@@ -11,7 +11,7 @@ export default defineConfig({
   },
 
   output: {
-    assetPrefix: 'http://localhost:3000/',
+    assetPrefix: 'se400-home',
   },
 
   source: {
