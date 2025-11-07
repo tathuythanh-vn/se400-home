@@ -22,37 +22,40 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      BACKEND_URL: http://localhost:5000/api
 
     steps:
-      - name: Checkout source code
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Use Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: 'pnpm'  # cache pnpm cho build nhanh hơn
+          cache: 'pnpm'
 
+      # If you use other package managers like yarn or pnpm,
+      # you will need to install them first
       - name: Install pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v3
         with:
-          version: 10
-
+          version: 10  # or specify your pnpm version
+          
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build project
+      - name: Build
+        env:
+          BACKEND_URL: http://localhost:5000/api
         run: pnpm run build
+        
 
-      - name: Setup GitHub Pages
+      - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload build artifacts
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'   # Thư mục output của Rsbuild
+          path: './dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
