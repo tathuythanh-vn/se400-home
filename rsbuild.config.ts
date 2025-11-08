@@ -21,7 +21,7 @@ export default defineConfig({
     // Please replace <REPO_NAME> with the repository name.
     // For example, "/my-project/"
     assetPrefix:
-      process.env.NODE_ENV === 'production' ? '/se400_home/' : 'auto',
+      process.env.NODE_ENV === 'production' ? '/se400-home/' : 'auto',
   },
 
   dev: {
