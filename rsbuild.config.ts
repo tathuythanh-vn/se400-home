@@ -5,13 +5,28 @@ import path from 'path';
 import dotenv from 'dotenv';
 dotenv.config({ path: path.resolve(__dirname, '.env') });
 
+const defaultAllowedOrigins =
+  /^https?:\/\/(?:(?:[^:]+\.)?localhost|127\.0\.0\.1|\[::1\])(?::\d+)?$/;
+
 export default defineConfig({
   server: {
     port: 3000,
+    strictPort: true, // Fail if port is already in use instead of using another port
+    cors: {
+      origin: [defaultAllowedOrigins, /^https?:\/\/.*\.cloudinary\.com$/],
+    },
   },
 
   output: {
-    assetPrefix: 'se400-home',
+    // Please replace <REPO_NAME> with the repository name.
+    // For example, "/my-project/"
+    assetPrefix:
+      process.env.NODE_ENV === 'production' ? '/se400_home/' : 'auto',
+  },
+
+  dev: {
+    assetPrefix: 'http://localhost:3000/', // Explicitly set dev asset prefix
+    lazyCompilation: false, // Disable lazy compilation to fix Module Federation issues
   },
 
   source: {
@@ -35,13 +50,26 @@ export default defineConfig({
         './store': './src/stores/index.ts',
         './styles': './src/App.css',
       },
-      shared: [
-        'react',
-        'react-dom',
-        'react-router-dom',
-        'react-redux',
-        '@reduxjs/toolkit',
-      ],
+      shared: {
+        react: {
+          singleton: true,
+          requiredVersion: '^19.2.0',
+        },
+        'react-dom': {
+          singleton: true,
+          requiredVersion: '^19.2.0',
+        },
+        'react-router-dom': {
+          singleton: true,
+        },
+        'react-redux': {
+          singleton: true,
+        },
+        '@reduxjs/toolkit': {
+          singleton: true,
+        },
+      },
+      dts: false, // Disable TypeScript declaration generation
     }),
   ],
 });
