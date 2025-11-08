@@ -47,6 +47,7 @@ jobs:
       - name: Build
         env:
           BACKEND_URL: http://localhost:5000/api
+          NODE_ENV: development
         run: pnpm run build
         
 
