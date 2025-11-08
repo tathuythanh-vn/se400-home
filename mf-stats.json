@@ -1,0 +1,262 @@
+{
+  "id": "home",
+  "name": "home",
+  "metaData": {
+    "name": "home",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "1.0.0",
+      "buildName": "home"
+    },
+    "remoteEntry": {
+      "name": "remoteEntry.js",
+      "path": "",
+      "type": "global"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "home",
+    "pluginVersion": "0.21.3",
+    "prefetchInterface": false,
+    "publicPath": "/se400-home/"
+  },
+  "shared": [
+    {
+      "singleton": true,
+      "requiredVersion": "^2.9.2",
+      "shareScope": "default",
+      "name": "@reduxjs/toolkit",
+      "version": "2.9.2",
+      "eager": false,
+      "id": "home:@reduxjs/toolkit",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "static/js/async/113.ac1fcad9.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [
+        "./store"
+      ]
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^19.2.0",
+      "shareScope": "default",
+      "name": "react-dom",
+      "version": "19.2.0",
+      "eager": false,
+      "id": "home:react-dom",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "static/js/async/101.0ee3cfc9.js",
+            "static/js/async/482.a256b50e.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^9.2.0",
+      "shareScope": "default",
+      "name": "react-redux",
+      "version": "9.2.0",
+      "eager": false,
+      "id": "home:react-redux",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "static/js/async/146.c0d53b65.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^7.9.5",
+      "shareScope": "default",
+      "name": "react-router-dom",
+      "version": "7.9.5",
+      "eager": false,
+      "id": "home:react-router-dom",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "static/js/async/279.388fc440.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [
+        "./MainLayout"
+      ]
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^19.2.0",
+      "shareScope": "default",
+      "name": "react",
+      "version": "19.2.0",
+      "eager": false,
+      "id": "home:react",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "static/js/async/472.5414565a.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [
+        "./SafeComponent",
+        "./MainLayout"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "alias": "auth",
+      "consumingFederationContainerName": "home",
+      "federationContainerName": "auth",
+      "moduleName": "AuthContent",
+      "usedIn": [
+        "src/bootstrap.tsx + 12 modules"
+      ],
+      "entry": "http://localhost:3001/remoteEntry.js"
+    },
+    {
+      "alias": "member",
+      "consumingFederationContainerName": "home",
+      "federationContainerName": "member",
+      "moduleName": "MemberContent",
+      "usedIn": [
+        "src/bootstrap.tsx + 12 modules"
+      ],
+      "entry": "http://localhost:3004/remoteEntry.js"
+    }
+  ],
+  "exposes": [
+    {
+      "path": "./MainLayout",
+      "id": "home:MainLayout",
+      "name": "MainLayout",
+      "requires": [
+        "react",
+        "react-router-dom"
+      ],
+      "file": "src\\components\\MainLayout.tsx",
+      "assets": {
+        "js": {
+          "sync": [
+            "static/js/async/369.9b27ed32.js",
+            "static/js/async/999.dbd8e687.js",
+            "static/js/async/__federation_expose_store.77aae59c.js",
+            "static/js/async/__federation_expose_MainLayout.53485585.js"
+          ],
+          "async": []
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      }
+    },
+    {
+      "path": "./SafeComponent",
+      "id": "home:SafeComponent",
+      "name": "SafeComponent",
+      "requires": [
+        "react"
+      ],
+      "file": "src\\components\\SafeComponent.tsx",
+      "assets": {
+        "js": {
+          "sync": [
+            "static/js/async/__federation_expose_SafeComponent.25f91cac.js"
+          ],
+          "async": []
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      }
+    },
+    {
+      "path": "./store",
+      "id": "home:store",
+      "name": "store",
+      "requires": [
+        "@reduxjs/toolkit"
+      ],
+      "file": "src\\stores\\index.ts",
+      "assets": {
+        "js": {
+          "sync": [
+            "static/js/async/369.9b27ed32.js",
+            "static/js/async/999.dbd8e687.js",
+            "static/js/async/__federation_expose_store.77aae59c.js",
+            "static/js/async/__federation_expose_MainLayout.53485585.js"
+          ],
+          "async": []
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      }
+    },
+    {
+      "path": "./styles",
+      "id": "home:styles",
+      "name": "styles",
+      "requires": [],
+      "file": "src\\App.css",
+      "assets": {
+        "js": {
+          "sync": [
+            "static/js/async/__federation_expose_styles.c20faff1.js"
+          ],
+          "async": []
+        },
+        "css": {
+          "sync": [
+            "static/css/async/__federation_expose_styles.1d2b6dcf.css"
+          ],
+          "async": []
+        }
+      }
+    }
+  ]
+}

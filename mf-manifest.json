@@ -1,0 +1,217 @@
+{
+  "id": "home",
+  "name": "home",
+  "metaData": {
+    "name": "home",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "1.0.0",
+      "buildName": "home"
+    },
+    "remoteEntry": {
+      "name": "remoteEntry.js",
+      "path": "",
+      "type": "global"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "home",
+    "pluginVersion": "0.21.3",
+    "prefetchInterface": false,
+    "publicPath": "/se400-home/"
+  },
+  "shared": [
+    {
+      "id": "home:@reduxjs/toolkit",
+      "name": "@reduxjs/toolkit",
+      "version": "2.9.2",
+      "singleton": true,
+      "requiredVersion": "^2.9.2",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "static/js/async/113.ac1fcad9.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "home:react-dom",
+      "name": "react-dom",
+      "version": "19.2.0",
+      "singleton": true,
+      "requiredVersion": "^19.2.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "static/js/async/101.0ee3cfc9.js",
+            "static/js/async/482.a256b50e.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "home:react-redux",
+      "name": "react-redux",
+      "version": "9.2.0",
+      "singleton": true,
+      "requiredVersion": "^9.2.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "static/js/async/146.c0d53b65.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "home:react-router-dom",
+      "name": "react-router-dom",
+      "version": "7.9.5",
+      "singleton": true,
+      "requiredVersion": "^7.9.5",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "static/js/async/279.388fc440.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "home:react",
+      "name": "react",
+      "version": "19.2.0",
+      "singleton": true,
+      "requiredVersion": "^19.2.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "static/js/async/472.5414565a.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    }
+  ],
+  "remotes": [
+    {
+      "federationContainerName": "auth",
+      "moduleName": "AuthContent",
+      "alias": "auth",
+      "entry": "http://localhost:3001/remoteEntry.js"
+    },
+    {
+      "federationContainerName": "member",
+      "moduleName": "MemberContent",
+      "alias": "member",
+      "entry": "http://localhost:3004/remoteEntry.js"
+    }
+  ],
+  "exposes": [
+    {
+      "id": "home:MainLayout",
+      "name": "MainLayout",
+      "assets": {
+        "js": {
+          "sync": [
+            "static/js/async/369.9b27ed32.js",
+            "static/js/async/999.dbd8e687.js",
+            "static/js/async/__federation_expose_store.77aae59c.js",
+            "static/js/async/__federation_expose_MainLayout.53485585.js"
+          ],
+          "async": []
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      },
+      "path": "./MainLayout"
+    },
+    {
+      "id": "home:SafeComponent",
+      "name": "SafeComponent",
+      "assets": {
+        "js": {
+          "sync": [
+            "static/js/async/__federation_expose_SafeComponent.25f91cac.js"
+          ],
+          "async": []
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      },
+      "path": "./SafeComponent"
+    },
+    {
+      "id": "home:store",
+      "name": "store",
+      "assets": {
+        "js": {
+          "sync": [
+            "static/js/async/369.9b27ed32.js",
+            "static/js/async/999.dbd8e687.js",
+            "static/js/async/__federation_expose_store.77aae59c.js",
+            "static/js/async/__federation_expose_MainLayout.53485585.js"
+          ],
+          "async": []
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      },
+      "path": "./store"
+    },
+    {
+      "id": "home:styles",
+      "name": "styles",
+      "assets": {
+        "js": {
+          "sync": [
+            "static/js/async/__federation_expose_styles.c20faff1.js"
+          ],
+          "async": []
+        },
+        "css": {
+          "sync": [
+            "static/css/async/__federation_expose_styles.1d2b6dcf.css"
+          ],
+          "async": []
+        }
+      },
+      "path": "./styles"
+    }
+  ]
+}
